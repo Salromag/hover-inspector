@@ -241,12 +241,7 @@
             ? "." + el.className.trim().split(/\s+/).join(".")
             : "";
 
-        const bg = getComputedStyle(document.body).backgroundColor || getComputedStyle(document.documentElement).backgroundColor;
-        const isDark = isDarkColor(bg);
-
-        const colors = isDark
-            ? { bg: '#1f2937', border: '#374151', title: '#60a5fa', label: '#e5e7eb', value: '#93c5fd' }
-            : { bg: '#f8fafc', border: '#cbd5e1', title: '#13458f', label: '#1e293b', value: '#334155' };
+        const colors = { bg: '#f8fafc', border: '#cbd5e1', title: '#13458f', label: '#1e293b', value: '#334155' };
 
         const header = `<div style="
             font-weight: 700;
@@ -305,16 +300,8 @@
             white-space: normal;
         ">
             ${header}
-            <div>${lines}</div>
+            <div style="text-align: left;">${lines}</div>
             <div style="padding: 12px; font-size: 11px; color: #0069d9; display:flex; justify-content: center;">Click on element to copy css!</div>
         </div>`;
-    }
-
-    function isDarkColor(color) {
-        const m = color.match(/\d+(\.\d+)?/g);
-        if (!m || m.length < 3) return false;
-        const [r, g, b] = m.map(Number);
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        return brightness < 128;
     }
 })();
