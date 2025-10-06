@@ -1,0 +1,48 @@
+#ui-assistant-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+.assistant-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(17, 24, 39, 0.9);
+  color: #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: auto;
+}
+
+#ui-assistant-highlight {
+  position: fixed;
+  background: rgba(99, 102, 241, 0.15);
+  border: 2px solid rgba(99, 102, 241, 0.8);
+  border-radius: 4px;
+  z-index: 9999999;
+  pointer-events: none;
+  display: none;
+}
+
+#ui-assistant-tooltip {
+  position: fixed;
+  background: rgba(17, 24, 39, 0.9);
+  color: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  z-index: 9999999;
+  max-width: 260px;
+  pointer-events: none;
+  line-height: 1.3;
+}
+
